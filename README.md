@@ -9,10 +9,10 @@ service should support the following functionality:
    integer and timestamp)
 2. Supports retrieval of data for a particular Data Provider
 3. supports definition of query rules to retrieve from data using these conditions
-   ○ eqc: equalsIgnoreCase (string)
-   ○ eq: equalsTo (timestamp and integer)
-   ○ lt: lessThan timestamp and integer)
-   ○ gt: greaterThan )any field timestamp and integer)
+   - eqc: equalsIgnoreCase (string)
+   - eq: equalsTo (timestamp and integer)
+   - lt: lessThan timestamp and integer)
+   - gt: greaterThan )any field timestamp and integer)
 
 # Tech stack
 
