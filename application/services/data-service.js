@@ -54,14 +54,9 @@ const addData = async (modelObj, correlationID) => {
 };
 
 const getData = async (providerId, rules, correlationID) => {
-  // perform fields validation
-  let providerData = {};
-  if (!rules) providerData = await Data.findOne({ providerId });
-  else {
-    const filter = queryRuleWrapper(rules);
-    filter.providerId = providerId
-    providerData = await Data.find(filter, { data: 1 });
-  }
+  const filter = queryRuleWrapper(rules);
+  filter.providerId = providerId
+  const providerData = await Data.find(filter, { data: 1 });
   logger.trace(`${correlationID}: <<<< Exiting ${getFuncName()})`);
   const response = {};
   response.data = providerData || {};
